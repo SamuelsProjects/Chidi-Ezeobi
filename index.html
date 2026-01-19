@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidi Ezeobi | Official Author Website</title>
+
+    <meta name="description" content="Official website of author Chidi Ezeobi. Explore published books, literary works, and author biography.">
+    <meta name="author" content="Chidi Ezeobi">
+
+    <!-- SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chidi Ezeobi",
+      "jobTitle": "Author",
+      "url": "https://www.yourwebsite.com"
+    }
+    </script>
+
+    <style>
+        :root {
+            --dark: #0f172a;
+            --dark-soft: #1e293b;
+            --gold: #c8a24d;
+            --light: #f8fafc;
+            --text: #1f2933;
+            --muted: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--dark-soft));
+            padding: 90px 20px 80px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        header h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 18px;
+        }
+
+        header h1::after {
+            content: "";
+            width: 70%;
+            height: 3px;
+            background: var(--gold);
+            position: absolute;
+            left: 15%;
+            bottom: 0;
+        }
+
+        header p {
+            margin-top: 22px;
+            font-size: 1.2rem;
+            color: #d1d5db;
+            font-style: italic;
+        }
+
+        /* SECTIONS */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 90px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 70px;
+        }
+
+        /* BOOK GRID */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+
+        .book-card {
+            background: #ffffff;
+            padding: 30px 25px;
+            border-radius: 18px;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+
+        .book-card img {
+            max-width: 240px;
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+        }
+
+        .book-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 6px;
+        }
+
+        .book-card p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 22px;
+        }
+
+        .book-card a {
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 40px;
+            background: #FF9900;
+            color: #111;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .book-card a:hover {
+            background: #b18d3f;
+        }
+
+        /* ABOUT */
+        #about {
+            background: var(--light);
+            border-top: 1px solid #e5e7eb;
+        }
+
+        #about .inner {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 35px;
+            border: 8px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        #about h2 {
+            font-family: Georgia, serif;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #374151;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b0f19;
+            color: #cbd5e1;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #9ca3af;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        footer hr {
+            border: none;
+            border-top: 1px solid #334155;
+            width: 60px;
+            margin: 35px auto;
+        }
+
+        footer p:last-child {
+            font-size: 0.75rem;
+            color: #6b7280;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CHIDI E. O. EZEOBI</h1>
+    <p>Official Author's Website & Literary Catalogue</p>
+</header>
+
+<section id="catalogue">
+    <h2>Books</h2>
+
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/6133w-wGcvL._SY425_.jpg" alt="Sledge Hammer Sentence">
+            <h3>Sledge Hammer Sentence</h3>
+            <p>Published: April 2020</p>
+            <a href="https://www.amazon.sg/Sledgehammer-Sentence-Chidi-Ezeobi/dp/1982246324/" target="_blank">BUY ON AMAZON</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/61c7iNgioIL._SY425_.jpg" alt="Disobedient Punishment and Mercy">
+            <h3>Disobedient, Punishment and Mercy</h3>
+            <p>Published: December 2025</p>
+            <a href="https://www.amazon.sg/DISOBEDIENCE-PUNISHMENT-MERCY-Chidi-Ezeobi/dp/B0G5ZRNSRC/" target="_blank">BUY ON AMAZON</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://i.thriftbooks.com/api/imagehandler/m/AF5A6C153D3AF5F40167942DA67C5AF18B8F302D.jpeg" alt="The Forgotten Princess and the Shark">
+            <h3>The Forgotten Princess and the Shark</h3>
+            <p>Published: March 2020</p>
+            <a href="https://www.thriftbooks.com/" target="_blank">BUY ONLINE</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71zM81mWLML._SY342_.jpg" alt="Abused Animals in Konkolo Village">
+            <h3>Abused Animals in Konkolo Village</h3>
+            <p>Published: December 2025</p>
+            <a href="https://www.amazon.sg/Abused-Animals-Konkolo-Village-Ezeobi/dp/B0FDBN4JH7/ref=sr_1_2?dib=eyJ2IjoiMSJ9.j2JFrmWkPC8PPK1QwJ8wWDkbFGsUZqWdPBB94WK9haDGjHj071QN20LucGBJIEps.r_b82nizzrpbB_vs0J9yDzVYRFOTZEd1pb8UL02IT9w&dib_tag=se&qid=1768831632&refinements=p_27%3AChidi+Ezeobi&s=books&sr=1-2" target="_blank">BUY ON AMAZON</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://i.thriftbooks.com/api/imagehandler/m/56406D91E47ED5EFBD4229D093C5899B81623732.jpeg" alt="Doubting Christ">
+            <h3>Doubting Christ</h3>
+            <p>Published: August 2021</p>
+            <a href="https://www.thriftbooks.com/" target="_blank">BUY ONLINE</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://i.thriftbooks.com/api/imagehandler/m/8B3A219F363D2EDD3FF29D812604C9602169B371.jpeg" alt="Udi and the Animals">
+            <h3>Udi and the Animals</h3>
+            <p>Published: June 2020</p>
+            <a href="https://www.thriftbooks.com/" target="_blank">BUY ONLINE</a>
+        </div>
+
+        
+
+        <div class="book-card">
+            <img src="https://i.thriftbooks.com/api/imagehandler/m/ED27D225C13A46135A68379367E8274D6B1A74D3.jpeg" alt="Maidservant">
+            <h3>Maidservant</h3>
+            <p>Published: September 2021</p>
+            <a href="https://www.thriftbooks.com/" target="_blank">BUY ONLINE</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="inner">
+        <img src="https://ap-pics2.gotpoem.com/ap-pics/user/5982/243big.jpg?1ajpg480" alt="Chidi Ezeobi">
+        <h2>About the Author</h2>
+        <p>
+            Chidi E. O. Ezeobi was born in Nigeria and received his early education there.
+            He attended Aguata High School, Anambra State, before migrating to the United States in 1996.
+            He earned an AAS in Business Administration from Kingsborough Community College and a BSc in
+            Professional Management from Medgar Evers College, New York.
+        </p>
+        <p>
+            He currently resides in Newark, New Jersey, and continues to contribute to literature
+            through storytelling and published works.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Chidi Ezeobi. All rights reserved.</p>
+    <div>
+        <a href="https://www.youtube.com/@chidiezeobi">YouTube</a>
+        <a href="https://www.instagram.com/chidi.e.ezeobi/">Instagram</a>
+        <a href="https://web.facebook.com/p/Chidi-E-Ezeobi-100045542242488/">Facebook</a>
+        <a href="https://www.tiktok.com/@chidiezeobi">TikTok</a>
+    </div>
+    
+</footer>
+
+</body>
+</html>
