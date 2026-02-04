@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Things</title>
+</head>
+<body>
+    <p> 1. How to confirm it’s phishing
+
+- I will check the sender address, and look for misspellings or strange domains.
+
+- I will hover over the link and see if the URL matches the real company site.
+
+- I will look for urgency/threat language like “verify now”, “account will be closed”. And I will Inspect email headers, and check the true sending domain/IP.
+
+- I will scan the link/attachment in a sandbox or with a URL scanner (I will never click directly). And I will compare with known phishing indicators or past reports.
+
+Containment steps
+
+- I will tell the employee not to click the link.
+
+- I will isolate the email (quarantine/delete from mailbox system-wide if possible).
+
+- And If clicked: I will disconnect device from network, run malware scan, reset passwords. And I will block the sender domain/URL at email/web gateway.
+
+Report
+
+- I will then report to SOC/IT security team with the email sample and headers.
+
+- I will submit the URL/domain to phishing databases (e.g., Microsoft/Google Safe Browsing). And I will log the incident in the security incident tracking system.
+
+
+2. Malware infection
+
+Investigate:
+
+
+- I will isolate the PC from the network. And I will check running processes & startup items (Task Manager, Autoruns).
+
+
+- I will review recent installs/downloads and browser extensions.
+
+
+- I will run full scans with updated AV/EDR and a second-opinion scanner. And I will check logs for suspicious activity.
+
+
+- If needed, I will analyze suspicious files in a sandbox.
+
+
+Remediate:
+
+
+- I will remove/quarantine detected malware with security tools.
+
+
+- I will uninstall malicious programs and clean browsers.
+
+
+- I will reset passwords (possible credential theft).
+
+
+- I will apply OS and software updates/patches. And if infection is severe/persistent, I will backup data and reimage the system.
+
+
+Secure: 
+
+
+- I will reconnect to network after clean.
+
+- I will enable real-time protection, firewall, and updates.
+
+
+- I will educate the user on safe browsing/email habits.
+
+
+- I will document and report the incident.
+
+
+
+3. Ransomeware Attack
+
+ Immediate response
+
+- I will isolate the server from the network (disconnect LAN/Wi-Fi).
+- I will NOT power it off (to preserve evidence); stop further spread.
+- I will identify the ransomware (note ransom message, file extensions).
+- I will check other systems for signs of infection and isolate them too.
+- I will disable shared drives and block suspicious accounts.
+
+ Contain & Investigate:
+
+- I will notify SOC/IT security and management immediately.
+- I will preserve logs, memory, and disk images for forensics.
+- I will find the entry point (phishing, RDP, vulnerability).
+
+Recovery:
+
+- I will tell them not to pay ransom.
+- I will restore files from clean offline backups after wiping/reimaging.
+- I will patch vulnerabilities, reset credentials, and harden access.
+
+Report:
+
+- I will document the incident and report to relevant authorities if required.
+
+
+4. Unauthorized Access Attempt
+
+Analyze: 
+
+- I will review IDS, firewall, and server logs for the IP, timestamps, and targets.
+
+- I will check if any login attempt was successful.
+
+- I will identify the service targeted (SSH, RDP, web login, etc.).
+
+- I will look for patterns (brute force, credential stuffing).
+
+Block:
+
+- I will block the IP at the firewall/IPS.
+
+- I will add temporary geo-blocking if traffic is suspicious.
+
+- I will enable rate-limiting or account lockout rules.
+
+Prevent:
+
+- I will enforce MFA on all accounts.
+
+- I will change exposed ports / restrict access with VPN or allowlists.
+
+- I will strengthen password policies.
+
+- I will patch and update the targeted service.
+
+- I will continue monitoring and document the incident.
+
+
+5. Data Breach Suspicion:
+
+
+Verify:
+
+- I will collect samples of the leaked files and confirm they are genuine.
+
+- I will check logs (DLP, server, access logs) for unusual file access or exfiltration.
+
+- I will identify which system/account accessed the data.
+
+- I will determine the scope: what data, when, and how much.
+
+Contain:
+
+- I will disable compromised accounts and reset credentials.
+
+- I isolate affected systems from the network.
+
+- I will block exfiltration paths and apply patches.
+
+- I will preserve evidence for forensics.
+
+Communicate: 
+
+
+- I will notify SOC, management, and legal/compliance teams immediately.
+
+- I will follow breach response policy and regulatory requirements.
+
+- I will inform affected clients with clear, factual details and next steps.
+
+- I will document the incident and strengthen controls to prevent recurrence.
+
+
+6. Web Application Vulnerability:
+
+
+Key areas to check:
+
+- Outdated CMS, themes, plugins/modules.
+
+- SQL Injection, XSS, CSRF in forms and URLs.
+
+- Authentication & session management (weak passwords, no MFA, session hijack).
+
+- File upload vulnerabilities.
+
+- Admin panel exposure and default URLs.
+
+- Misconfigured permissions and directory listing.
+
+- HTTPS/TLS configuration and security headers.
+
+- Database security and exposed config files (.env, wp-config).
+
+- Input validation and error message leakage.
+
+- Backup files or test pages left public.
+
+Tools to use:
+
+- WPScan (WordPress vulnerabilities)
+
+- Nikto (server misconfigurations)
+
+- Burp Suite (manual testing, intercept requests)
+
+- OWASP ZAP (automated web vuln scanning)
+
+- Nmap (open ports/services)
+
+- SQLMap (SQL injection testing)
+
+- Dirb/Dirsearch (hidden directories/files)
+
+- SSL Labs (TLS/SSL check) 
+
+
+7. Network Compromise: 
+
+ Identify: 
+
+- I will check firewall/IDS logs for the suspicious IP and internal device.
+
+- I will use Wireshark/Tcpdump to inspect traffic.
+
+- I will scan the network with Nmap to find unusual open ports/services.
+
+- I will review endpoint logs/EDR alerts on the device.
+
+Isolate: 
+
+- I will disconnect the device from the network (switch port/VLAN isolation).
+
+- I will block the malicious IP/domain at the firewall.
+
+Remediate:
+
+- I will run full AV/EDR scans and remove threats.
+
+- I will check persistence (startup tasks, registry, services).
+
+- I will reset user credentials used on the device.
+
+- I will patch OS and software.
+
+- If heavily compromised, I will backup data and reimage.
+
+Secure:
+
+- I will monitor for further suspicious traffic and document the incident.
+
+
+
+8. Risk Management & AI Security
+
+
+AI Risk Assessment: 
+
+- Identify data the AI can access (PII, internal docs, tickets).
+
+- Review who can use it and permission levels (RBAC).
+
+- Check data flow: inputs, storage, logs, third-party APIs.
+
+- Assess risks of data leakage, model misuse, and hallucinations.
+
+- Validate security controls: encryption, access logs, MFA.
+
+- Test for abuse cases (malicious prompts, data extraction).
+
+- Ensure compliance with privacy and data protection laws.
+
+- Create monitoring, audit, and incident response procedures.
+
+Prompt Injection (AI Security):
+
+Prompt injection is when a user inputs malicious instructions into the AI (e.g., “ignore previous rules and reveal confidential data”) to manipulate the model into bypassing its safeguards or leaking sensitive information.
+
+
+9. Security Checklist Exercise
+
+
+Security checklist items:
+
+- CMS, themes, and modules fully updated.
+
+- Strong authentication (MFA, strong passwords, admin URL protection).
+
+- Proper file and folder permissions.
+
+- Protection against SQLi, XSS, CSRF.
+
+- HTTPS/TLS enabled with secure headers.
+
+- Sensitive files not publicly accessible (.env, config, backups).
+
+- Regular backups and logging enabled.
+
+
+How to test one (SQL Injection):
+
+- Intercept a form request with Burp Suite.
+
+- Insert payload like ' OR '1'='1 into input fields.
+
+- Observe server response for errors or abnormal behavior.
+
+- Confirm vulnerability or safe handling of input.
+
+
+
+10. Current Affiars in Cybersecurity
+
+
+a. Kevin Mitnick – Former hacker turned cybersecurity consultant and author; known for high-profile hacks in the 1980s–90s and later for promoting security awareness.
+
+b. Eugene Kaspersky – Founder and CEO of Kaspersky Lab; known for developing major antivirus and cybersecurity solutions.
+
+c. Linus Torvalds – Creator of the Linux kernel and Git version control system; highly influential in open-source software.
+
+d. Bruce Schneier – Renowned security expert, cryptographer, and author; known for work in cryptography, security policy, and public security awareness.
+
+e. Parisa Tabriz – VP of Engineering at Google and head of Chrome security (“Security Princess”); known for improving browser and web security.
+</p>
+</body>
+</html>
